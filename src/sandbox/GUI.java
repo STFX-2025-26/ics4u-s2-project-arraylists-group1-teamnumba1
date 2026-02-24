@@ -1,13 +1,15 @@
 package sandbox;
 
 import java.awt.EventQueue;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
 public class GUI {
 
 	private JFrame frame;
-
+	private ArrayList<String> studentNames = new ArrayList<>();
+	
 	/**
 	 * Launch the application.
 	 */
