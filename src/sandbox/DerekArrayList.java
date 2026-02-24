@@ -17,8 +17,8 @@ public class DerekArrayList {
 		myArrayList.add("Nancy");
 		myArrayList.add("Charlie");
 		
-		System.out.println("Array Contents: \n");
-		System.out.println(myArrayList);
+		System.out.println("Array Contents:");
+		System.out.println(myArrayList + "\n");
 		
 		removeMethod(myArrayList);
 		
@@ -43,7 +43,7 @@ public class DerekArrayList {
 			
 			x.remove(search);
 			
-			System.out.println("'" + search + "'" + " successfully removed!" );
+			System.out.println("\n" + "'" + search + "'" + " successfully removed!" + "\n" );
 			System.out.println("New Array Contents:");
 			System.out.println(x);
 			
@@ -51,7 +51,7 @@ public class DerekArrayList {
 			
 		} else {
 			
-			System.out.println("Name not found");
+			System.out.println("\n Name not found");
 			
 			
 		}
