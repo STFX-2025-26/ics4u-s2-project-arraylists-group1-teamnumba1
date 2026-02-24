@@ -1,33 +1,11 @@
+package sandbox;
+
 import java.util.ArrayList;
 
-/*
- * temporary class
+/**
+ * Method class implements various methods used by GUI
  */
-public class AddMethod {
-	
-	/*
-	 * Debug, pass String name for test cases.
-	 * Prints appended ArrayList.
-	 */
-	public static void main(String[] args) {
-			
-		if (args[0].isEmpty()) {
-			
-			System.out.println("Invalid cli input! Pass name of student as String!");
-			return;
-			
-		}
-		
-		ArrayList<String> studentNames = new ArrayList<>();
-		
-		while (true) {
-			
-			add(studentNames, args[0]);
-			System.out.println(studentNames);
-			
-			
-		}
-	}
+public class Methods {
 	
 	/**
 	 * The add method appends the given first name of a student to ArrayList studentNames storing other student first names.
@@ -37,6 +15,7 @@ public class AddMethod {
 	 * ArrayList storing the first names of students
 	 * @param name
 	 * String storing the first name of a student
+	 * @return void
 	 */
 	public static void add(ArrayList<String> studentNames, String name) {
 		
