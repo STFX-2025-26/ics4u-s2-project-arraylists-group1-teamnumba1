@@ -61,7 +61,7 @@ public class GUI {
 		
 		JTextField textField = new JTextField();
 		textField.setHorizontalAlignment(SwingConstants.LEFT);
-		textField.setBounds(47, 32, 377, 20);
+		textField.setBounds(66, 32, 358, 20);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
