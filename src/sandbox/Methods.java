@@ -1,6 +1,7 @@
 package sandbox;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Method class implements various methods used by GUI
@@ -19,7 +20,8 @@ public class Methods {
 	 */
 	public static void add(ArrayList<String> studentNames, String name) {
 		
-		// check if blank, if so return early
+		// check if blank or null, if so return early
+		if (name == null) return;
 		if (name.isBlank()) return;
 		
 		// append name to ArrayList studentNames
@@ -43,4 +45,39 @@ public class Methods {
 		return studentString;
 		
 	}
+
+
+	/* DESCRIPTION - Removes input from ArrayList
+	 * PARAMETERS - String
+	 * RETURN - void 
+	 */
+
+	public static void remove(ArrayList<String> studentNames) {
+		
+		
+		Scanner observer = new Scanner(System.in);
+		System.out.println("Input name to remove (Case Sensitive!)");
+		String search = new String();
+		search = observer.nextLine(); // stores user's input as a string
+		
+		if (studentNames.contains(search)) { // searches the array list for user's string
+			
+			
+			studentNames.remove(search); // if found will confirm, and display new array contents.
+			
+			System.out.println("\n" + "'" + search + "'" + " successfully removed!" + "\n" );
+			System.out.println("New Array Contents:");
+			System.out.println(studentNames);
+			
+			
+			
+		} else {
+			
+			System.out.println("\n Name not found"); // if the name isn't found returns name not found
+			
+			
+		}
+	}
+	
+
 }

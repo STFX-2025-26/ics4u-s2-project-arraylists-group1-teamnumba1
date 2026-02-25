@@ -4,6 +4,13 @@ import java.awt.EventQueue;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUI {
 
@@ -40,7 +47,70 @@ public class GUI {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		frame.setResizable(false);
+		
+		JLabel titleLabel = new JLabel("Student Records");
+		titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		titleLabel.setBounds(10, 11, 414, 14);
+		frame.getContentPane().add(titleLabel);
+		
+		JLabel nameLabel = new JLabel("Name:");
+		nameLabel.setBounds(10, 35, 46, 14);
+		frame.getContentPane().add(nameLabel);
+		
+		JTextField textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.LEFT);
+		textField.setBounds(66, 32, 358, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(10, 60, 315, 190);
+		frame.getContentPane().add(textArea);
+		
+		JButton btnAdd = new JButton("Add");
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Methods.add(studentNames, textField.getText());
+			}
+		});
+		btnAdd.setBounds(335, 60, 89, 23);
+		frame.getContentPane().add(btnAdd);
+		
+		JButton btnRemove = new JButton("Remove");
+		btnRemove.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnRemove.setBounds(335, 94, 89, 23);
+		frame.getContentPane().add(btnRemove);
+		
+		JButton btnSort = new JButton("Sort");
+		btnSort.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnSort.setBounds(335, 128, 89, 23);
+		frame.getContentPane().add(btnSort);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				System.exit(0);
+			}
+		});
+		btnExit.setBounds(335, 227, 89, 23);
+		frame.getContentPane().add(btnExit);
+		
+		JButton btnList = new JButton("List");
+		btnList.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnList.setBounds(335, 162, 89, 23);
+		frame.getContentPane().add(btnList);
 		Methods.add(null, null);
 	}
-
 }
