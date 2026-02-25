@@ -70,11 +70,7 @@ public class GUI {
 		frame.getContentPane().add(textArea);
 		
 		JButton btnAdd = new JButton("Add");
-		btnAdd.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Methods.add(studentNames, textField.getText());
-			}
-		});
+		btnAdd.addActionListener(e -> Methods.add(studentNames, textField));
 		btnAdd.setBounds(335, 60, 89, 23);
 		frame.getContentPane().add(btnAdd);
 		
@@ -95,12 +91,7 @@ public class GUI {
 		frame.getContentPane().add(btnSort);
 		
 		JButton btnExit = new JButton("Exit");
-		btnExit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				frame.dispose();
-				System.exit(0);
-			}
-		});
+		btnExit.addActionListener(e -> Methods.exit());
 		btnExit.setBounds(335, 227, 89, 23);
 		frame.getContentPane().add(btnExit);
 		
@@ -112,5 +103,6 @@ public class GUI {
 		btnList.setBounds(335, 162, 89, 23);
 		frame.getContentPane().add(btnList);
 		Methods.add(null, null);
+		
 	}
 }
