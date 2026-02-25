@@ -20,7 +20,8 @@ public class Methods {
 	 */
 	public static void add(ArrayList<String> studentNames, String name) {
 		
-		// check if blank, if so return early
+		// check if blank or null, if so return early
+		if (name == null) return;
 		if (name.isBlank()) return;
 		
 		// append name to ArrayList studentNames
