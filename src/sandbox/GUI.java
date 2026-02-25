@@ -91,7 +91,7 @@ public class GUI {
 		frame.getContentPane().add(btnExit);
 		
 		JButton btnList = new JButton("List");
-		//btnList.addActionListener(e -> Methods.list());
+		btnList.addActionListener(e -> Methods.list(studentNames, textArea));
 		btnList.setBounds(335, 162, 89, 23);
 		frame.getContentPane().add(btnList);
 		Methods.add(null, null);

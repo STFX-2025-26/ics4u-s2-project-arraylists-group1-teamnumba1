@@ -3,6 +3,7 @@ package sandbox;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -51,7 +52,7 @@ public class Methods {
 	 * PARAMETERS: ArrayList<String> x
 	 * RETURN TYPE: String
 	 */
-	public static String list(ArrayList<String> x, JTextField jtf) {
+	public static String list(ArrayList<String> x, JTextArea jtf) {
 		
 		String studentString = "";
 		
