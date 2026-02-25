@@ -51,7 +51,7 @@ public class Methods {
 	 * PARAMETERS: ArrayList<String> x
 	 * RETURN TYPE: String
 	 */
-	public static String list(ArrayList<String> x) {
+	public static String list(ArrayList<String> x, JTextField jtf) {
 		
 		String studentString = "";
 		
@@ -59,6 +59,10 @@ public class Methods {
 			
 			studentString = studentString + x.get(i) + "\n";
 		}
+		
+		// For convenience sake I am printing the string into the JTextFeild directly from here.
+		// I am aware that this method does not need to return anything but I am following the instructions given on D2L.
+		jtf.setText(studentString);
 		
 		return studentString;
 		
