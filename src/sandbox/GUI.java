@@ -69,24 +69,19 @@ public class GUI {
 		textArea.setBounds(10, 60, 315, 190);
 		frame.getContentPane().add(textArea);
 		
+		// buttons
 		JButton btnAdd = new JButton("Add");
 		btnAdd.addActionListener(e -> Methods.add(studentNames, textField));
 		btnAdd.setBounds(335, 60, 89, 23);
 		frame.getContentPane().add(btnAdd);
 		
 		JButton btnRemove = new JButton("Remove");
-		btnRemove.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		//btnRemove.addActionListener(e -> Methods.remove());
 		btnRemove.setBounds(335, 94, 89, 23);
 		frame.getContentPane().add(btnRemove);
 		
 		JButton btnSort = new JButton("Sort");
-		btnSort.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		//btnSort.addActionListener(e -> Methods.sort());
 		btnSort.setBounds(335, 128, 89, 23);
 		frame.getContentPane().add(btnSort);
 		
@@ -96,10 +91,7 @@ public class GUI {
 		frame.getContentPane().add(btnExit);
 		
 		JButton btnList = new JButton("List");
-		btnList.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		//btnList.addActionListener(e -> Methods.list());
 		btnList.setBounds(335, 162, 89, 23);
 		frame.getContentPane().add(btnList);
 		Methods.add(null, null);
