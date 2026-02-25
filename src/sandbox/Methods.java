@@ -34,7 +34,7 @@ public class Methods {
 	 * RETURN - void 
 	 */
 
-	public static void removeMethod (ArrayList<String> studentNames) {
+	public static void remove(ArrayList<String> studentNames) {
 		
 		
 		Scanner observer = new Scanner(System.in);
