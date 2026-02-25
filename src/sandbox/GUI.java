@@ -76,7 +76,7 @@ public class GUI {
 		frame.getContentPane().add(btnAdd);
 		
 		JButton btnRemove = new JButton("Remove");
-		//btnRemove.addActionListener(e -> Methods.remove());
+		btnRemove.addActionListener(e -> Methods.remove(studentNames, textField));
 		btnRemove.setBounds(335, 94, 89, 23);
 		frame.getContentPane().add(btnRemove);
 		
