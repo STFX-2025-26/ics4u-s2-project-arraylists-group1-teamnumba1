@@ -1,7 +1,6 @@
 package sandbox;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -73,32 +72,33 @@ public class Methods {
 	 * RETURN - void 
 	 */
 
-	public static void remove(ArrayList<String> studentNames) {
+	public static void remove(ArrayList<String> studentNames, JTextField jtf) {
 		
 		
-		Scanner observer = new Scanner(System.in);
-		System.out.println("Input name to remove (Case Sensitive!)");
-		String search = new String();
-		search = observer.nextLine(); // stores user's input as a string
+		// check if null, if so return early
+		if (jtf == null) { 
+					return;
+				}
+				
+		String name = jtf.getText();
+
 		
-		if (studentNames.contains(search)) { // searches the array list for user's string
+		if (studentNames.contains(name)) { // searches the array list for user's string
 			
 			
-			studentNames.remove(search); // if found will confirm, and display new array contents.
+			studentNames.remove(name); // if found will confirm, and display new array contents.
 			
-			System.out.println("\n" + "'" + search + "'" + " successfully removed!" + "\n" );
-			System.out.println("New Array Contents:");
-			System.out.println(studentNames);
 			
+			JOptionPane.showMessageDialog(null, "'" + name + "'" + " successfully removed!");
+			return;
 			
 			
 		} else {
 			
-			System.out.println("\n Name not found"); // if the name isn't found returns name not found
-			
+			JOptionPane.showMessageDialog(null, "Name not found!");
+			return;
 			
 		}
 	}
 	
-
 }
