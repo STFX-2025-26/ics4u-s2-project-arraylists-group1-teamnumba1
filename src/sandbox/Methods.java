@@ -24,9 +24,7 @@ public class Methods {
 	public static void add(ArrayList<String> studentNames, JTextField jtf) {
 		
 		// check if null, if so return early
-		if (jtf == null) { 
-			return;
-		}
+		if (jtf == null) return;
 		
 		// assign name to String
 		String name = jtf.getText();
