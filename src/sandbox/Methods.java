@@ -26,4 +26,21 @@ public class Methods {
 		studentNames.add(name.strip());
 		
 	}
+	
+	/* DESCRIPTION: list all names in ArrayList as a String
+	 * PARAMETERS: ArrayList<String> x
+	 * RETURN TYPE: String
+	 */
+	public static String list(ArrayList<String> x) {
+		
+		String studentString = "";
+		
+		for (int i=0; i<x.size(); i++) {
+			
+			studentString = studentString + x.get(i) + "\n";
+		}
+		
+		return studentString;
+		
+	}
 }
