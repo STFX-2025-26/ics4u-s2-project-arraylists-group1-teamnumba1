@@ -81,7 +81,7 @@ public class GUI {
 		frame.getContentPane().add(btnRemove);
 		
 		JButton btnSort = new JButton("Sort");
-		//btnSort.addActionListener(e -> Methods.sort());
+		btnSort.addActionListener(e -> Methods.sort(studentNames));
 		btnSort.setBounds(335, 128, 89, 23);
 		frame.getContentPane().add(btnSort);
 		

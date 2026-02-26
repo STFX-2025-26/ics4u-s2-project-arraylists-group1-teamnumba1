@@ -1,6 +1,7 @@
 package sandbox;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -102,6 +103,18 @@ public class Methods {
 			return;
 			
 		}
+	}
+	
+	/*
+	 * DESCRIPTION - sorts array in alphabetical order
+	 * PARAMATERS - ArrayList<String> studentNames
+	 * RETURN - void
+	 */
+	public static void sort(ArrayList<String> studentNames) {
+		
+		// sorts array in alphabetical order
+		studentNames.sort(Comparator.naturalOrder());
+		
 	}
 	
 }
