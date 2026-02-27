@@ -44,6 +44,7 @@ public class GUI {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -94,7 +95,6 @@ public class GUI {
 		btnList.addActionListener(e -> Methods.list(studentNames, textArea));
 		btnList.setBounds(335, 162, 89, 23);
 		frame.getContentPane().add(btnList);
-		Methods.add(null, null);
 		
 	}
 }
